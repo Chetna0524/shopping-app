@@ -7,7 +7,7 @@ const PayButton = ({ cartItems }) => {
 	const handleCheckout = async () => {
 		try {
 			const res = await axios.post(
-				"http://localhost:4000/create-checkout-session",
+				"https://stripe-backend-omej.onrender.com/create-checkout-session",
 				{
 					cartItems,
 					userId: currentUser.uid,
