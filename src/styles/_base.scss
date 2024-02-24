@@ -1,0 +1,88 @@
+a {
+	text-decoration: none;
+}
+li {
+	list-style-type: none;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.btn-comm {
+	background-color: $primary-color;
+	color: $white;
+	display: inline-block;
+	padding: 5px 10px;
+	text-align: center;
+	border: 1px solid transparent;
+	font-size: 14px;
+	font-weight: 400;
+	border-radius: 5px;
+	@include transition(all 0.35s ease-in);
+	&:hover {
+		background-color: #fff;
+		border-color: $primary-color;
+		color: $primary-color;
+	}
+}
+
+.btn-black {
+	background: $black;
+	&:hover {
+		border-color: $black;
+		color: $black;
+	}
+}
+
+.btn-text {
+	color: $primary-color;
+	background: transparent;
+	border: 0;
+	outline: 0;
+	box-shadow: unset;
+	font-weight: 600;
+}
+
+.section-heading {
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.input-grp {
+	position: relative;
+	border: $border-light-grey;
+	padding: 8px 5px;
+	margin-top: 20px;
+	border-radius: 5px;
+	.input-icon {
+		position: absolute;
+		top: 10px;
+		left: 15px;
+	}
+	input {
+		border: 0;
+		box-shadow: unset;
+		outline: 0;
+		height: auto;
+		padding-left: 35px;
+		padding-top: 0;
+		padding-bottom: 0;
+		font-size: 1rem;
+		&:focus {
+			box-shadow: unset;
+		}
+		&::-webkit-input-placeholder {
+			color: $text-light-grey;
+			font-size: 1rem;
+		}
+	}
+}
+
+.box-heading {
+	font-size: 18px;
+}
+
+.text-right {
+	text-align: right;
+}
