@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM, { hydrateRoot } from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.scss";
 
@@ -15,20 +15,30 @@ import { extendedProductsSlice } from "./features/products/productsSlice";
 
 store.dispatch(extendedProductsSlice.endpoints.getAllProducts.initiate());
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <Router>
-        <Routes>
-          <Route path="/*" element={<App />} />
-        </Routes>
-      </Router>
-    </Provider>
-  </React.StrictMode>
+/* const root = ReactDOM.createRoot(document.getElementById("root")); */
+/* root.render(
+	<React.StrictMode>
+		<Provider store={store}>
+			<Router>
+				<Routes>
+					<Route path="/*" element={<App />} />
+				</Routes>
+			</Router>
+		</Provider>
+	</React.StrictMode>
+); */
+
+hydrateRoot(
+	document.getElementById("root"),
+	<React.StrictMode>
+		<Provider store={store}>
+			<Router>
+				<Routes>
+					<Route path="/*" element={<App />} />
+				</Routes>
+			</Router>
+		</Provider>
+	</React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+/* reportWebVitals(); */
