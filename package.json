@@ -25,7 +25,7 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "webpack --config webpack.config.cjs",
+		"build": "webpack",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"ssr": "npm run build && node ./dist/server.cjs"
