@@ -50,11 +50,11 @@ const serverConfig = {
 		filename: "server.cjs",
 	},
 	module: babelLoader,
-	plugins: [
+	/* plugins: [
 		new webpack.EnvironmentPlugin({
 			PORT: 10000,
 		}),
-	],
+	], */
 	resolve,
 };
 
