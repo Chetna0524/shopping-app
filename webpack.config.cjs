@@ -52,7 +52,7 @@ const serverConfig = {
 	module: babelLoader,
 	plugins: [
 		new webpack.EnvironmentPlugin({
-			PORT: 3001,
+			PORT: 10000,
 		}),
 	],
 	resolve,
