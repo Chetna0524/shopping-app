@@ -11,7 +11,7 @@ import store from "../src/app/store";
 
 const app = express();
 app.use("/static", express.static(__dirname));
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3001;
 
 /**
  * Produces the initial non-interactive HTML output of React
